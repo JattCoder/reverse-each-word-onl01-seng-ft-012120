@@ -3,7 +3,7 @@ def reverse_each_word (string)
   lastword = false
   lastwordd = stringarr.last
   newstring = ""
-  stringarr.each do |word|
+  stringarr.collect do |word|
     wordsize = word.length - 1
     while wordsize >= 0
       newstring += word[wordsize]
