@@ -9,4 +9,5 @@ def reverse_each_word (string)
     end
     newstring += " "
   end
+  puts newstring
 end
