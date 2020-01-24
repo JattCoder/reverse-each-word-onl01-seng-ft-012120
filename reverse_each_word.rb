@@ -1,14 +1,12 @@
 def reverse_each_word (string)
+  stringarr = string.split(" ")
   newstring = ""
-  sentencearr = string.split(" ")
-  sentencearr.each do |word|
-    letters = word.length
-    while letters <= 0
-      letter = word[letters]
-      newstring += letter
-      letters -= 1
+  stringarr.each do |word|
+    wordsize = word.length - 1
+    while wordsize >= 0
+      newstring += word[wordsize]
+      wordsize -= 1
     end
     newstring += " "
   end
-  return newstring
 end
