@@ -1,13 +1,20 @@
 def reverse_each_word (string)
   stringarr = string.split(" ")
+  lastword = false
+  lastwordd = stringarr.last
   newstring = ""
   stringarr.each do |word|
     wordsize = word.length - 1
     while wordsize >= 0
       newstring += word[wordsize]
       wordsize -= 1
+      if lastwordd == word
+        lastword = true
+      end
     end
-    newstring += " "
+    if lastword == false
+      newstring += " "
+    end
   end
   return newstring
 end
